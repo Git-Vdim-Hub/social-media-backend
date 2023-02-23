@@ -1,0 +1,29 @@
+{
+  "name": "social-media-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node index",
+    "dev": "nodemon index",
+    "seed": "node utils/seed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Git-Vdim-Hub/social-media-backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Git-Vdim-Hub/social-media-backend/issues"
+  },
+  "homepage": "https://github.com/Git-Vdim-Hub/social-media-backend#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^6.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
