@@ -18,7 +18,8 @@ const userSchema = new Schema(
         },
         thoughts: [{
             type: Schema.Types.ObjectId,
-            ref: 'Thought'
+            ref: 'Thought',
+            required: false,
         }],
         friends: [{
             type: Schema.Types.ObjectId,
@@ -32,7 +33,7 @@ const userSchema = new Schema(
         id: false
     }
 );
-console.log("PIKACHU@35");
+
 userSchema.virtual('friendCount').get(function(){
     return this.friends.length;
 })
@@ -40,4 +41,4 @@ userSchema.virtual('friendCount').get(function(){
 const User = model('User', userSchema);
 //User.create([{username: 'test', email: 'test123@email.com'}])
 
-module.exports = User
+module.exports = User;
