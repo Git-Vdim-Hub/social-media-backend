@@ -18,12 +18,11 @@ const userSchema = new Schema(
         },
         thoughts: [{
             type: Schema.Types.ObjectId,
-            ref: 'Thought',
-            required: false,
+            ref: 'thought',
         }],
         friends: [{
             type: Schema.Types.ObjectId,
-            ref: "User"
+            ref: "user"
         }]
     },
     {
@@ -38,7 +37,7 @@ userSchema.virtual('friendCount').get(function(){
     return this.friends.length;
 })
 
-const User = model('User', userSchema);
+const User = model('user', userSchema);
 //User.create([{username: 'test', email: 'test123@email.com'}])
 
 module.exports = User;
