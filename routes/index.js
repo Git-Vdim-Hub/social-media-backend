@@ -1,3 +1,5 @@
+//base route for all API calls of this back-end framework. If a route is input that does not exist after /api, this index file will return a wrong route message
+
 const router = require('express').Router();
 const apiRoutes = require('./api');
 //http://localhost:3001/api

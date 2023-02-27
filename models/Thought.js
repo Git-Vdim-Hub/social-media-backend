@@ -27,7 +27,7 @@ const thoughtSchema = new Schema(
         id: false
     }
 );
-
+//counts the number of reactions that have been posted to a Thought
 thoughtSchema.virtual('reactionCount').get(function(){
     return this.reactions.length
 });

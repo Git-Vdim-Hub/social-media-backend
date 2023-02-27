@@ -1,3 +1,5 @@
+//routes for all user calls
+
 const router = require('express').Router();
 const {
     getUsers,

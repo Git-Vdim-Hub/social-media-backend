@@ -32,12 +32,11 @@ const userSchema = new Schema(
         id: false
     }
 );
-
+//returns the number of friends any user has
 userSchema.virtual('friendCount').get(function(){
     return this.friends.length;
 })
 
 const User = model('user', userSchema);
-//User.create([{username: 'test', email: 'test123@email.com'}])
 
 module.exports = User;

@@ -1,3 +1,5 @@
+//connection to express and basic routing followed by port listening while using mongoose connection in the config folder.
+
 const express = require('express');
 const db = require('./config/connection');
 const routes = require('./routes');

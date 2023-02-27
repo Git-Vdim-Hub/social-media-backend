@@ -1,3 +1,5 @@
+//routes for all thought calls, including reactions to thoughts
+
 const router = require('express').Router();
 const {
     getThoughts,
