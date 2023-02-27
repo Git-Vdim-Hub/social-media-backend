@@ -24,7 +24,7 @@ module.exports = {
         Thought.create(req.body)
         .then((thought) => {
             return User.findOneAndUpdate(
-                {_id: req.body.userId},
+                {username: req.body.username},
                 { $addToSet: { thoughts: thought._id}},
                 {new: true}
             );
@@ -61,7 +61,7 @@ module.exports = {
             if(!thought){
                 res.status(404).json({message: 'No thought with that ID'})
             } else {
-                //Reaction.deleteMany({_id: { $in: thought.reactions}})
+                Reaction.deleteMany({_id: { $in: thought.reactions}})
             }
         })
         .then(()=> res.json({message: 'Thought and associated reactions deleted!'}))
